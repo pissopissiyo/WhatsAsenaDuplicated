@@ -1,13 +1,16 @@
-/* Copyright (C) 2020 Yusuf Usta.
+/* Codded by @isuwabrooo
+
+Telegram: t.me/RavinduManoj
+Facebook: https://www.facebook.com/ravindu.manoj.79
+
 
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
 
-WhatsAsena - Yusuf Usta
-Developer & Co-Founder - Phaticusthiccy
+Whats bot - isuwabrooo
 */
 
-const Asena = require('../events');
+const ᴋɪɴɢɪꜱᴜᴡᴀ = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const Config = require('../config');
 
@@ -33,7 +36,7 @@ function secondsToHms(d) {
     return hDisplay + mDisplay + sDisplay; 
 }
 
-Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
+ᴋɪɴɢɪꜱᴜᴡᴀ.newcmdaddtosew({on: 'text', fromMe: false, delownsewcmd: false}, (async (message, match) => {
     if (Config.AFKMSG == 'default') {
 
         if (AFK.isAfk && ((!message.jid.includes('-')) || (message.jid.includes('-') && 
@@ -85,7 +88,7 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
     }
 }));
 
-Asena.addCommand({on: 'text', fromMe: true, deleteCommand: false}, (async (message, match) => {
+ᴋɪɴɢɪꜱᴜᴡᴀ.newcmdaddtosew({on: 'text', fromMe: true, delownsewcmd: false}, (async (message, match) => {
     if (AFK.isAfk && !message.id.startsWith('3EB0')) {
         AFK.lastseen = 0;
         AFK.reason = false;
@@ -95,7 +98,7 @@ Asena.addCommand({on: 'text', fromMe: true, deleteCommand: false}, (async (messa
     }
 }));
 
-Asena.addCommand({pattern: 'afk ?(.*)', fromMe: true, deleteCommand: false, desc: Lang.AFK_DESC}, (async (message, match) => {     
+ᴋɪɴɢɪꜱᴜᴡᴀ.newcmdaddtosew({pattern: 'afk ?(.*)', fromMe: true, delownsewcmd: false, desc: Lang.AFK_DESC}, (async (message, match) => {     
     if (!AFK.isAfk) {
         AFK.lastseen = Math.round((new Date()).getTime() / 1000);
         if (match[1] !== '') { AFK.reason = match[1]; }
